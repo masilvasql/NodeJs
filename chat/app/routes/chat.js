@@ -1,9 +1,9 @@
-module.exports = (app)=>{
-    app.post('/chat',(req,res)=>{
-        res.render('chat')
+module.exports = (application)=>{
+    application.post('/chat',(req,res)=>{
+        application.app.controllers.chat.iniciarChat(application, req, res)
     })
 
-    app.get('/chat',(req,res)=>{
-        res.render('chat')
+    application.get('/chat',(req,res)=>{
+        application.app.controllers.chat.iniciarChat(application, req, res)
     })
 }
